@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vishalinfiflexdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vishalinfiflexdemo
+  template:
+    metadata:
+      labels:
+        app: vishalinfiflexdemo 
+    spec:
+      containers:
+        - name: vishalinfiflexdemo 
+          image: myacrnew23.azurecr.io/vishalinfiflexdemo
+          ports:
+          - containerPort: 80
